@@ -1,4 +1,9 @@
+# -*- sh -*-
 
 CONFIG_HOME=$(dirname ${BASH_SOURCE[0]})
+
+# Source basic functions
+source ${CONFIG_HOME}/bashrc_functions.bash
+source ${CONFIG_HOME}/functions.bash
 
 source ${CONFIG_HOME}/autojump/autojump.bash
