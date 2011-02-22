@@ -42,15 +42,21 @@ alias     u="cd .."
 alias    u2="cd ../.."
 alias    u3="cd ../../.."
 
-# Section: Uncategorized
+# Section: ls
+ls --version &> /dev/null
+if [ $? -eq 0 ] ; then
+    alias    ll="ls -alh --color=tty"
+else
+    alias    ll="ls -alh"
+fi
 
-alias    ll="ls -alh --color=tty"
+# Section: Uncategorized
 
 alias  sssh="sudo ssh"
 alias   ssh="ssh -A"
 
 alias     l="less"
-alias    lr="less -r"
+alias    lr="less -R"
 
 alias   wcl="wc -l"
 
