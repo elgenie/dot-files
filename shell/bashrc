@@ -42,6 +42,9 @@ shopt -s cdable_vars
 # Aliases
 source_one ${CONFIG_HOME}/bash_aliases
 
+# Completion: (somewhat in sync with aliases)
+source_one ${CONFIG_HOME}/completion/completion.bash
+
 # Autojump: a package that keeps track of commonly used directories
 # (jumpstat) and provides a command for jumping to a fuzzy match (j)
 source_one ${CONFIG_HOME}/autojump/autojump.bash
