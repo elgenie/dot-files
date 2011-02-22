@@ -25,8 +25,10 @@ export SVN_EDITOR="${EDITOR}"
 # Env variables for terminal colors
 source_one ${CONFIG_HOME}/term_colors
 
-# History Tuning
+# Grep
+export GREP_OPTIONS='--color=auto'
 
+# History Tuning
 # Colon-delimited list of patterns which should be excluded from being
 # stored in bash history. There's also the special pattern '&', which
 # suppresses duplicate entries (very useful!).
@@ -36,6 +38,9 @@ shopt -s histappend
 # Navigation
 shopt -s cdspell
 shopt -s cdable_vars
+
+# Aliases
+source_one ${CONFIG_HOME}/bash_aliases
 
 # Autojump: a package that keeps track of commonly used directories
 # (jumpstat) and provides a command for jumping to a fuzzy match (j)

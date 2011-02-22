@@ -1,0 +1,61 @@
+# -*- sh -*-
+
+# Section: Editing
+alias     e="$EDITOR"
+alias    em="emacs"
+alias    ec="emacsclient -c --alternate-editor=''"
+alias   ebc="emacs -batch -f batch-byte-compile"
+
+# Section: Git
+alias     g="git"
+alias    gr="grep -ri"
+alias   gdc="git diff -U6 --cached"
+alias   grn="grep -rin"
+alias   grl="grep -ril"
+alias   grv="grep -v"
+alias   grs="git reset --soft HEAD^"
+alias  grsh="git reset --hard HEAD^"
+alias  grbt="git rebase -i trunk"
+alias  grbc="git rebase --continue"
+alias  grbs="git rebase --skip"
+alias   gcm="git co master"
+alias    ga="git add"
+alias    gs="git show"
+alias   gfc="git show | grep -e '[+-]\s*function' | sort"
+alias   gsw="git show -w -U6"
+alias   gss="git show --stat"
+alias   gvl="git svn log --show-commit"
+alias    gl="git log --abbrev-commit --date=local --decorate"
+alias   glm="gl --author=eletuchy --all-match"
+alias gvain="git shortlog -n --author=eletuchy --since=1.week.ago"
+alias gvain_rev="g shortlog --since=1.week.ago --grep='Reviewed by: eletuchy' -i -n"
+alias gvain_com="g log --since=1.week.ago --grep='Commenters: .*eletuchy.*' -i --all-match --oneline"
+
+# Section: SVN
+alias   sup="svn up"
+alias   sin="svn commit"
+alias    sd="svn diff -x \"-U6\" --diff-cmd diff"
+
+# Section: Navigation
+
+alias     u="cd .."
+alias    u2="cd ../.."
+alias    u3="cd ../../.."
+
+# Section: Uncategorized
+
+alias    ll="ls -alh --color=tty"
+
+alias  sssh="sudo ssh"
+alias   ssh="ssh -A"
+
+alias     l="less"
+alias    lr="less -r"
+
+alias   wcl="wc -l"
+
+alias aliasreload="source ${CONFIG_HOME}/bash_aliases"
+
+# Platform Specific / Sensitive Aliases
+source ~/.alias
+
