@@ -3,7 +3,7 @@
 ### the [user] section to your info
 
 [core]
-        excludesfile = $CONFIG_HOME/../git/GIT_EXCLUDE
+        excludesfile = ~/dot-files/git/GIT_EXCLUDE
         preloadindex = true
         pager = less -+$LESS -FRX # see note in git-config re $LESS env variable
         eol = lf # default is "native"
