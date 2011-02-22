@@ -6,4 +6,14 @@ CONFIG_HOME=$(dirname ${BASH_SOURCE[0]})
 source ${CONFIG_HOME}/bashrc_functions.bash
 source ${CONFIG_HOME}/functions.bash
 
+# Specify the editor based on the availability of emacs 23
+eclient_version=$(emacsclient --version 2>&1)
+if [ "${eclient_version#emacsclient 23}" != "$eclient_version" ]; then
+    export EDITOR='emacsclient -t -a ""'
+else
+    export EDITOR='emacs -nw'
+fi
+export GIT_EDITOR="${EDITOR}"
+export SVN_EDITOR="${EDITOR}"
+
 source ${CONFIG_HOME}/autojump/autojump.bash
