@@ -22,6 +22,21 @@ fi
 export GIT_EDITOR="${EDITOR}"
 export SVN_EDITOR="${EDITOR}"
 
+# Env variables for terminal colors
+source_one ${CONFIG_HOME}/term_colors
+
+# History Tuning
+
+# Colon-delimited list of patterns which should be excluded from being
+# stored in bash history. There's also the special pattern '&', which
+# suppresses duplicate entries (very useful!).
+export HISTIGNORE="&:ls:[bf]g:exit:"
+shopt -s histappend
+
+# Navigation
+shopt -s cdspell
+shopt -s cdable_vars
+
 # Autojump: a package that keeps track of commonly used directories
 # (jumpstat) and provides a command for jumping to a fuzzy match (j)
-source ${CONFIG_HOME}/autojump/autojump.bash
+source_one ${CONFIG_HOME}/autojump/autojump.bash
