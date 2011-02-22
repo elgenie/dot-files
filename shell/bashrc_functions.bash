@@ -20,6 +20,10 @@ source_one () {
     return 1
 }
 
+parse_git_branch() {
+  (git symbolic-ref -q HEAD && (git symbolic-ref -q HEAD | sed 's/^refs\/heads\///')) || "no branch";
+}
+
 _epoch () {
     DATE="jan 1 1970 utc $1 sec"
     date +%s -d"$DATE"

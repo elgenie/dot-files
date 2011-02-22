@@ -48,3 +48,21 @@ source_one ${CONFIG_HOME}/completion/completion.bash
 # Autojump: a package that keeps track of commonly used directories
 # (jumpstat) and provides a command for jumping to a fuzzy match (j)
 source_one ${CONFIG_HOME}/autojump/autojump.bash
+
+# Shell Prompt
+GIT_PS1_SHOWDIRTYSTATE="1"
+GIT_PS1_SHOWUPSTREAM="auto"
+
+# Set up the prompt
+REV_PROMPT=\
+'$(if [ -e .svn ]; then echo " r$(svn info | grep Revision | cut -d\  -f2)"
+   elif [ $(expr match `pwd` "/home") -gt 0 ]; then
+     __git_ps1;
+   fi
+)'
+
+PS1='\[\033k\033\\\]' # this little bit of insanity lets screen read the title of the running program
+export PS1=$PS1"$MG\u@\h$MB$REV_PROMPT $MW\w$R> $N"
+
+# a reasonable default might be:
+# export PS1='[\u@\h \W]\$ '
