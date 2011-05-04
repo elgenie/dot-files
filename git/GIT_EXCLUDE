@@ -4,6 +4,7 @@ TAGS
 *.pyo
 *.beam
 \#*
+\.#*
 *~
 *.swp
 *.swn

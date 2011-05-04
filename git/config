@@ -40,6 +40,7 @@
         amend = commit --amend
         incr = commit --amend -C HEAD
         plus = commit --amend -a -C HEAD
+        undo = reset --soft @{-1}
         gr = grep -i -I
         ci = commit
         di = diff -U6
@@ -79,7 +80,7 @@
         template = /home/eletuchy/admin/scripts/templates/git-commit-template.txt
 [user]
         name = Eugene Letuchy
-        email = eugene@fb.com
+        email = eletuchy@fb.com
 [log]
         date = relative
 [blame]
