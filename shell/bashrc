@@ -28,6 +28,9 @@ source_one ${CONFIG_HOME}/term_colors
 # Grep
 export GREP_OPTIONS='--color=auto'
 
+# Python Interactive: see http://valueerror.wordpress.com/2009/11/03/python-shell-history-autocompletion-and-rc-file/
+export PYTHONSTARTUP="${CONFIG_HOME}/../python/pythonrc"
+
 # History Tuning
 # Colon-delimited list of patterns which should be excluded from being
 # stored in bash history. There's also the special pattern '&', which
