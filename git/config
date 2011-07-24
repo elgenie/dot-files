@@ -96,8 +96,8 @@
         mnemonicprefix = true # shows what's being compared
         # noprefix = true # better copy-pasta; have to disable due rebase incompat
 
-        # consider a stat-only change as indicating a change
-        autorefreshindex = false
+        # don't consider a stat-only change as indicating a change
+        autorefreshindex = true
 [apply]
         whitespace = fix
         ignorewhitespace = false
