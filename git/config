@@ -115,8 +115,10 @@
         stat = true
 
 [url "git@github.com:elgenie/"]
-     insteadOf = github:
+        insteadOf = github:
 
 [url "/home/engshare/git/projects/"]
-     insteadOf = engshare:
+        insteadOf = engshare:
 
+[review "review.ghostface64.com"]
+        username = eletuchy
