@@ -3,122 +3,128 @@
 ### the [user] section to your info
 
 [core]
-        excludesfile = ~/dot-files/git/GIT_EXCLUDE
-        preloadindex = true
-        pager = less -+$LESS -FRX # see note in git-config re $LESS env variable
-        eol = lf # default is "native"
+	excludesfile = ~/dot-files/git/GIT_EXCLUDE
+	preloadindex = true
+	pager = less -+$LESS -FRX # see note in git-config re $LESS env variable
+	eol = lf # default is "native"
 
 ### colors are meant for a dark terminal
 [color]
-        ui = auto
-        diff = auto
-        status = auto
-        branch = auto
-        interactive = auto
-        grep = auto
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	grep = auto
 [color "branch"]
-        current = white blue bold
-        local  = blue
-        remote = green
+	current = white blue bold
+	local  = blue
+	remote = green
 [color "diff"]
-        plain = white
-        meta = yellow bold
-        frag = magenta bold
-        old = red
-        new = green
-        whitespace = red blink
+	plain = white
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = green
+	whitespace = red blink
 [color "status"]
-        added = yellow
-        changed = green
-        untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [alias]
-        br = branch
-        bg = bisect good
-        bb = bisect bad
-        co = checkout
-        amend = commit --amend
-        incr = commit --amend -C HEAD
-        plus = commit --amend -a -C HEAD
-        undo = reset --soft @{-1}
-        gr = grep -i -I
-        ci = commit
-        di = diff -U6
-        dc = diff --cached -U6
-        ds = diff --stat
-        dsc = diff --stat --cached
-        rb = rebase
-        rbi = rebase -i
-        rbit = !git rebase -i `git merge-base HEAD trunk`
-        dm = !git log -p -w --reverse HEAD...`git merge-base HEAD trunk`
-        prune-all = !git remote | xargs -n 1 git remote prune
-        st = status
-        su = status -uno
-        cp = cherry-pick
-        sh = !git-sh
-        # "garbage-collect branches" whose tips have been merged into trunk
-        gcbr = !git branch --no-color --no-track --merged trunk | sed 's/[ *]*//' | grep -v master | grep -v '(no branch)' | xargs -n1 git branch -D || exit 0
-        w = whatchanged
+	br = branch
+	bg = bisect good
+	bb = bisect bad
+	co = checkout
+	amend = commit --amend
+	incr = commit --amend -C HEAD
+	plus = commit --amend -a -C HEAD
+	undo = reset --soft @{-1}
+	gr = grep -i -I
+	ci = commit
+	di = diff -U6
+	dc = diff --cached -U6
+	ds = diff --stat
+	dsc = diff --stat --cached
+	rb = rebase
+	rbi = rebase -i
+	rbit = !git rebase -i `git merge-base HEAD trunk`
+	dm = !git log -p -w --reverse HEAD...`git merge-base HEAD trunk`
+	prune-all = !git remote | xargs -n 1 git remote prune
+	st = status
+	su = status -uno
+	cp = cherry-pick
+	sh = !git-sh
+	# "garbage-collect branches" whose tips have been merged into trunk
+	gcbr = !git branch --no-color --no-track --merged trunk | sed 's/[ *]*//' | grep -v master | grep -v '(no branch)' | xargs -n1 git branch -D || exit 0
+	w = whatchanged
 
-        # Search for a given string in all patches and print commit messages
-        # example: search for any commit that adds or removes string "foobar"
-        #     g srch foobar
-        # example: search commits for string "foobar" in directory src/lib
-        #     g srch foobar src/lib
-        # example: search commits for "foobar", print full diff of commit with 1 line context
-        #     g srch foobar --pickaxe-all -U1 src/lib
-        srch = "!f() { query=\"$1\"; shift; git log -S\"$query\" \"$@\"; }; f \"$@\""
+	# Search for a given string in all patches and print commit messages
+	# example: search for any commit that adds or removes string "foobar"
+	#     g srch foobar
+	# example: search commits for string "foobar" in directory src/lib
+	#     g srch foobar src/lib
+	# example: search commits for "foobar", print full diff of commit with 1 line context
+	#     g srch foobar --pickaxe-all -U1 src/lib
+	srch = "!f() { query=\"$1\"; shift; git log -S\"$query\" \"$@\"; }; f \"$@\""
 
-        # submodule do: e.g. git subdo pull
-        subdo = submodule foreach git
+	# submodule do: e.g. git subdo pull
+	subdo = submodule foreach git
 
 [svn]
-        followparent = true
-        rmdir = true
+	followparent = true
+	rmdir = true
 
 [commit]
-        template = /home/eletuchy/admin/scripts/templates/git-commit-template.txt
+	template = /home/eletuchy/admin/scripts/templates/git-commit-template.txt
 [user]
-        name = Eugene Letuchy
-        email = eletuchy@fb.com
+	name = Eugene Letuchy
+	email = eletuchy@fb.com
 [log]
-        date = relative
+	date = relative
 [blame]
-        date = short
+	date = short
 
 [branch]
-        autosetupmerge  = true
-        # Somewhat tricksy settings to consider
-        # autosetuprebase = true
+	autosetupmerge	= true
+	# Somewhat tricksy settings to consider
+	# autosetuprebase = true
 
 [diff]
-        renames = copy
-        mnemonicprefix = true # shows what's being compared
-        # noprefix = true # better copy-pasta; have to disable due rebase incompat
+	renames = copy
+	mnemonicprefix = true # shows what's being compared
+	# noprefix = true # better copy-pasta; have to disable due rebase incompat
 
-        # don't consider a stat-only change as indicating a change
-        autorefreshindex = true
+	# consider a stat-only change as not indicating a change
+	autorefreshindex = true
 [apply]
-        whitespace = fix
-        ignorewhitespace = false
+	whitespace = fix
+	ignorewhitespace = false
 [merge]
-        tool = emerge
+	tool = emerge
 [rerere]
-        enabled = true
-        autoupdate = true
+	enabled = true
+	autoupdate = true
 [status]
-        relativePaths = false
-        submodulesummary = true
+	relativePaths = false
+	submodulesummary = true
 [web]
-        browser = lynx
+	browser = lynx
 [rebase]
-        stat = true
+	stat = true
 
 [url "git@github.com:elgenie/"]
-        insteadOf = github:
+	insteadOf = github:
 
 [url "/home/engshare/git/projects/"]
-        insteadOf = engshare:
+	insteadOf = engshare:
 
 [review "review.ghostface64.com"]
-        username = eletuchy
+	username = eletuchy
+
+[gc]
+	pruneexpire = 520.weeks.ago
+	auto = 0
+[repack]
+	UseDeltaBaseOffset = true
