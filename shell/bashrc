@@ -12,12 +12,13 @@ source_one /etc/bashrc
 add_path $HOME/bin
 add_path $HOME/bin/git
 
-# Specify the editor based on the availability of emacs 23
-eclient_version=$(emacsclient --version 2>&1)
-if [ "${eclient_version#emacsclient 23}" != "$eclient_version" ]; then
-    export EDITOR='emacsclient -t -a ""'
-else
-    export EDITOR='emacs -nw'
+# Specify the editor based on the availability of emacs 23+
+export EDITOR='emacs -nw'
+if hash emacsclient 2>&- ; then
+    eclient_major_version=$( emacsclient --version 2>&1 | cut -f2 -d\ | cut -f1 -d. )
+    if [ $eclient_major_version -ge 23 ]; then
+        export EDITOR='emacsclient -t -a ""'
+    fi
 fi
 export GIT_EDITOR="${EDITOR}"
 export SVN_EDITOR="${EDITOR}"
