@@ -16,10 +16,9 @@ alias aim="fssh appproxy%03g.sf2p"
 alias jab="fssh jabber%03g.sf2p"
 
 mkcd () {
-    mkdir -p "$1" && cd "$1"
+    mkdir -p "$1" && cd "$1";
 }
 
-rs () {
-    HASH=`git svn find-rev r$1`
-    git show -w $HASH
+srch() {
+    git show -w $(git svn find-rev r$1);
 }
