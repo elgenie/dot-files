@@ -66,7 +66,7 @@ REV_PROMPT=\
 )'
 
 PS1='\[\033k\033\\\]' # this little bit of insanity lets screen read the title of the running program
-export PS1=$PS1"$MG\u@\h$MB$REV_PROMPT $MW\w$R> $N"
+export PS1=$PS1"$MG\u@\h$MB$REV_PROMPT $MW\w \T\n$R> $N"
 
 # a reasonable default might be:
 # export PS1='[\u@\h \W]\$ '
