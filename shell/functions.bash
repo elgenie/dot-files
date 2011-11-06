@@ -9,16 +9,20 @@ fssh () {
     sudo ssh $HOST $@
 }
 
-alias chan="fssh channel%03g.sf2p"
-alias pres="fssh presence%03g.sf2p"
-alias chlog="fssh chatlog%03g.sf2p"
-alias aim="fssh appproxy%03g.sf2p"
-alias jab="fssh jabber%03g.sf2p"
-
 mkcd () {
     mkdir -p "$1" && cd "$1";
 }
 
-srch() {
+# git commit all with message
+gcam () {
+    git commit -a -m "$*";
+}
+
+# git commit incremental with message
+gcim () {
+    git commit -m "$*";
+}
+
+srch () {
     git show -w $(git svn find-rev r$1);
 }
