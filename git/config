@@ -47,6 +47,7 @@
 	dc = diff --cached -U6
 	ds = diff --stat
 	dsc = diff --stat --cached
+        pr = pull --rebase
 	rb = rebase
 	rbi = rebase -i
 	rbit = !git rebase -i `git merge-base HEAD trunk`
