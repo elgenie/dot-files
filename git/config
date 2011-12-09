@@ -129,3 +129,5 @@
 	auto = 0
 [repack]
 	UseDeltaBaseOffset = true
+[github]
+	user = elgenie

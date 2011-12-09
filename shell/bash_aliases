@@ -52,7 +52,6 @@ else
 fi
 
 # Section: Uncategorized
-
 alias  sssh="sudo ssh"
 alias   ssh="ssh -A"
 
