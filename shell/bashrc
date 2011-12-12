@@ -43,6 +43,9 @@ shopt -s histappend
 shopt -s cdspell
 shopt -s cdable_vars
 
+# Globbing - see http://www.linuxjournal.com/content/bash-extended-globbing
+shopt -s extglob
+
 # Aliases
 source_one ${CONFIG_HOME}/bash_aliases
 
