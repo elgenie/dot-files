@@ -31,6 +31,13 @@ _epoch () {
     date -ud"$DATE"
 }
 
+# this is the function recommended by the which man page
+unalias which;
+which () {
+    (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@;
+}
+export -f which;
+
 _sj() {
     COMMAND=$@
 
