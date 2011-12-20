@@ -61,6 +61,7 @@ alias    lr="less -R"
 alias   wcl="wc -l"
 
 alias aliasreload="source ${CONFIG_HOME}/bash_aliases"
+alias rebash="source ~/.bash_profile"
 
 # Platform Specific / Sensitive Aliases
 source ~/.alias
