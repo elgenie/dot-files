@@ -31,12 +31,14 @@ _epoch () {
     date -ud"$DATE"
 }
 
-# this is the function recommended by the which man page
-unalias which;
-which () {
-    (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@;
-}
-export -f which;
+if file -L /usr/bin/which | grep -vq 'shell script'; then
+    # this is the function recommended by the gnu which man page but some
+    # platforms (debian, mac) have shitty script implementations
+    which () {
+        (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@;
+    }
+    export -f which;
+fi
 
 _sj() {
     COMMAND=$@
