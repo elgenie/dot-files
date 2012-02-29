@@ -123,6 +123,8 @@
 
 [review "review.ghostface64.com"]
 	username = eletuchy
+[review "review.buffy.fb.com"]
+	username = eletuchy
 
 [gc]
 	pruneexpire = 520.weeks.ago
