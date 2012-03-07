@@ -20,9 +20,9 @@ if hash emacsclient 2>&- ; then
     if [ $eclient_major_version -ge 23 ]; then
         OS=$(uname);
         export ALTERNATE_EDITOR="";
-        if [ "${OS}" == "Darwin" ]; then
-            export ALTERNATE_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon";
-        fi
+        # if [ "${OS}" == "Darwin" ]; then
+        #     export ALTERNATE_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon";
+        # fi
         export EDITOR="emacsclient -t";
     fi
 fi
