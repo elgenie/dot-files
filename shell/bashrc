@@ -44,6 +44,8 @@ export PYTHONSTARTUP="${CONFIG_HOME}/../python/pythonrc"
 # suppresses duplicate entries (very useful!).
 export HISTIGNORE="&:ls:[bf]g:exit:"
 shopt -s histappend
+# Reread and append to history each time prompt is displayed
+export PROMPT_COMMAND="history -n ; history -a"
 
 # Navigation
 shopt -s cdspell
