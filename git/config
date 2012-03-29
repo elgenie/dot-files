@@ -133,3 +133,5 @@
 	UseDeltaBaseOffset = true
 [github]
 	user = elgenie
+[push]
+	default = matching
