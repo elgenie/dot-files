@@ -134,4 +134,4 @@
 [github]
 	user = elgenie
 [push]
-	default = matching
+	default = upstream
