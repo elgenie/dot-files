@@ -11,3 +11,6 @@ complete -o default -o nospace -F _git_diff gdc
 complete -o default -o nospace -F _git_svn gvn
 complete -o default -o nospace -F _git_commit gca
 complete -o default -o nospace -F _git_commit gci
+complete -o default -o nospace -F _git_show gs
+complete -o default -o nospace -F _git_show gsw
+complete -o default -o nospace -F _git_show gss
