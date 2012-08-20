@@ -30,7 +30,7 @@ alias    gl="git log --abbrev-commit --date=local --decorate"
 alias   glm="gl --author=eletuchy --all-match"
 alias gvain="git shortlog -n --author=eletuchy --since=1.week.ago"
 alias gvain_rev="g shortlog --since=1.week.ago --grep='Reviewed by: eletuchy' -i -n"
-alias gvain_com="g log --since=1.week.ago --grep='Commenters: .*eletuchy.*' -i --all-match --oneline"
+alias gvain_com="g log --since=1.week.ago --grep='Reviewers: .*eletuchy.*' -i --all-match --oneline"
 
 # Section: SVN
 alias   sup="svn up"
@@ -65,4 +65,3 @@ alias rebash="source ~/.bash_profile"
 
 # Platform Specific / Sensitive Aliases
 source ~/.alias
-

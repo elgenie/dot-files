@@ -38,6 +38,7 @@
 	bb = bisect bad
 	co = checkout
 	amend = commit --amend
+	a = commit --amend
 	incr = commit --amend -C HEAD
 	plus = commit --amend -a -C HEAD
 	undo = reset --soft @{-1}
