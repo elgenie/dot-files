@@ -260,9 +260,9 @@ __git_ps1 ()
 		elif [ "true" = "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ]; then
 			if [ -n "${GIT_PS1_SHOWDIRTYSTATE-}" ]; then
 				if [ "$(git config --bool bash.showDirtyState)" != "false" ]; then
-					git diff --no-ext-diff --quiet --exit-code || w="*"
+					git diff-files --no-ext-diff --quiet --ignore-submodules --exit-code || w="*"
 					if git rev-parse --quiet --verify HEAD >/dev/null; then
-						git diff-index --cached --quiet HEAD -- || i="+"
+						git diff-index --cached --quiet HEAD --ignore-submodules -- || i="+"
 					else
 						i="#"
 					fi
