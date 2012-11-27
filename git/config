@@ -100,9 +100,9 @@
 
 	# consider a stat-only change as not indicating a change
 	autorefreshindex = true
-[apply]
-	whitespace = fix
-	ignorewhitespace = false
+# [apply]
+# 	whitespace = fix
+# 	ignorewhitespace = false
 [merge]
 	tool = emerge
 [rerere]
