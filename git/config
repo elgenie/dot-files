@@ -78,8 +78,6 @@
 	followparent = true
 	rmdir = true
 
-[commit]
-	template = /home/eletuchy/admin/scripts/templates/git-commit-template.txt
 [user]
 	name = Eugene Letuchy
 	email = eletuchy@fb.com
@@ -136,3 +134,5 @@
 	user = elgenie
 [push]
 	default = upstream
+[credential]
+	helper = osxkeychain
