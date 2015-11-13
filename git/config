@@ -117,14 +117,6 @@
 [url "git@github.com:elgenie/"]
 	insteadOf = github:
 
-[url "/home/engshare/git/projects/"]
-	insteadOf = engshare:
-
-[review "review.ghostface64.com"]
-	username = eletuchy
-[review "review.buffy.fb.com"]
-	username = eletuchy
-
 [gc]
 	pruneexpire = 520.weeks.ago
 	auto = 0
