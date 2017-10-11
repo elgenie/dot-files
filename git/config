@@ -7,6 +7,7 @@
 	preloadindex = true
 	pager = less -+$LESS -FRX # see note in git-config re $LESS env variable
 	eol = lf # default is "native"
+	untrackedCache = true
 
 ### colors are meant for a dark terminal
 [color]
@@ -80,7 +81,8 @@
 
 [user]
 	name = Eugene Letuchy
-	email = eletuchy@fb.com
+#	email = eletuchy@fb.com
+	email = eletuchy@gmail.com
 [log]
 	date = relative
 [blame]
